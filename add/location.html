@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Location Picker</title>
+  <meta charset="utf-8" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Select a Location</h2>
+<div id="map"></div>
+<p>Latitude: <span id="lat"></span> <br> Longitude: <span id="lng"></span></p>
+<p style="font-size: 15px; padding: 12px;">We will use the latitude and longitude to calculate distance then equate with the price</p>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+
+const map = L.map('map').setView([0.2827, 34.7519], 13); 
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap',
+  }).addTo(map);
+
+  let marker;
+  map.on('click', function (e) {
+    const lat = e.latlng.lat.toFixed(6);
+    const lng = e.latlng.lng.toFixed(6);
+
+    document.getElementById('lat').textContent = lat;
+    document.getElementById('lng').textContent = lng;
+
+    if (marker) {
+      marker.setLatLng(e.latlng);
+    } else {
+      marker = L.marker(e.latlng).addTo(map);
+    }
+
+  });
+</script>
+
+</body>
+</html>
