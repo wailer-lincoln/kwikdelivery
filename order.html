@@ -4,51 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order</title>
-    <style>
-        body {
-          font-family: Arial, sans-serif;
-          margin: 0;
-          padding: 12px;
-        }
-        header {
-          background-color: #333;
-          color: white;
-          padding: 20px;
-          text-align: center;
-        }
-        nav {
-          margin-top: 10px;
-        }
-        nav a {
-          color: white;
-          text-decoration: none;
-          margin: 0 15px;
-          font-weight: bold;
-        }
-        nav a:hover {
-          text-decoration: underline;
-        }
-        footer {
-          background-color: #f1f1f1;
-          color: #555;
-          text-align: center;
-          padding: 15px;
-          bottom: 0;
-          width: 100%;
-        }
-      </style>
+    <link rel="stylesheet" href="style.css">    
 </head>
 <body>
-    <header>
-        <h1>KwikDeliveries</h1>
-        <nav>
-            <a href="..\kwikdelivery\index.html">Home</a>
-            <a href="">About</a>
-            <a href="">Services</a>
-            <a href="">Contact</a>
-            <a href="..\kwikdelivery\add.html">&#43;</a>
-        </nav>
-      </header>
+        <header>
+            <div class="main-header">
+                <a href="index.html"><h3>KwikDel</h3></a>
+
+                <div class="header-middle-section">
+                    <input class="search-bar" type="text" placeholder="Search">
+
+                    <button class="search-button">
+                        <img class="search-icon" src="icons/search-icon.png">
+                    </button>
+                </div>
+
+                <div class="header-right-section">
+                        <a class="cart-link header-link" href="checkout.html">
+                            <div class="cart-quantity">0</div>
+                            <img class="cart-icon" src="icons/cart-icon.png">
+
+                        </a>                        
+                </div> 
+                
+                <div class="menu-container">
+                    <div class="menu-icon" onclick="toggleMenu()">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="index.html">Home</a>
+                        <a href="orders.html">Orders</a>
+                        <a href="services.html">Services</a>
+                        <a href="order.html">Order</a>
+                        <a href="add.html">&#43;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-selector">
+                <div class="groceries">Groceries</div>
+                <div class="drinks">Foods & Drinks</div>
+                <div class="kitchen-accessories">Kitchen Accessories</div>
+            </div>
+
+        </header>
+        
     <h2>Make an order</h2>
     <form action="">
         <select id="contentSelect">
@@ -83,3 +86,6 @@
 
 
 </script>
+
+
+<script src="script.js"></script>

@@ -1,0 +1,254 @@
+
+header{
+    background-color: rgb(120 133 145);
+    /* display: flex; */
+
+}
+
+header h3{
+    margin: 0%;
+}
+
+header a{
+    text-decoration: none;
+    color: black;  
+}
+
+header nav{
+    margin: auto;
+    padding: 5px;
+}
+
+.main-header{
+    display: flex;
+    padding: 5px;
+}
+
+.header-middle-section{
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+}
+.header-right-section{
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+.menu-container{
+  width: 10%;
+}
+
+header .item-selector{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+header .item-selector .groceries{
+    padding: 5px;
+    background-color: #b5b9b9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header .item-selector .foods{
+    padding: 5px;
+    background-color: #b5b9b9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header .item-selector .drinks{
+    padding: 5px;
+    background-color: #b5b9b9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header .item-selector .kitchen-accessories{
+    padding: 5px;
+    background-color: #b5b9b9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.search-bar {
+  margin: auto;
+  width: 80%;
+  height: 18px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+}
+
+.search-button {
+  border: none;
+  height: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 4px;
+}
+
+.search-icon {
+  height: 10px;
+  margin-left: 2px;
+  margin-top: 3px;
+}
+
+.orders-text {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-icon {
+  width: 27px;
+  margin-top: -45%;
+}
+
+.cart-link{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.cart-text {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-quantity {
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: black;
+  /* position: absolute; */
+  /* left: 81.5%; */
+}
+
+
+    .menu-icon {
+      width: 22px;
+      height: 17px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .menu-icon div {
+      height: 2px;
+      background-color: #fff;
+      border-radius: 3px;
+    }
+
+      .dropdown-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #f0f0f0;
+      position: absolute;
+      top: 46px;
+      right: 6px;
+      padding: 10px;
+      min-width: 120px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .dropdown-menu a {
+      text-decoration: none;
+      margin: 5px 0;
+      margin-left: 5px;
+      font-size: 15px;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      color: #0056b3;
+    }
+    
+    .dropdown-menu.show {
+      display: flex;
+    }
+
+
+
+
+.main {
+  max-width: 850px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  /* margin-left: auto;
+     margin-right auto;
+     Is a trick for centering an element horizontally
+     without needing a container. */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-to-orders-link {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.delivery-date {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.product-info {
+  margin-bottom: 3px;
+}
+
+.product-image {
+  max-width: 150px;
+  max-height: 150px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.progress-labels-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.current-status {
+  color: rgb(6, 125, 98);
+}
+
+@media (max-width: 575px) {
+  .progress-labels-container {
+    font-size: 16px;
+  }
+}
+
+
+.progress-bar-container {
+  height: 25px;
+  width: 100%;
+
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: green;
+  border-radius: 50px;
+  width: 50%;
+}

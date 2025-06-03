@@ -1,96 +1,293 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KwikDeliveries</title>
-      <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 12px;
-    }
-    header {
-      background-color: #333;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      background-color: #f1f1f1;
-      color: #555;
-      text-align: center;
-      padding: 15px;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"> -->
 </head>
 <body>
-      <header>
-        <h1>KwikDeliveries</h1>
-        <nav>
-            <a href="..\kwikdelivery\index.html">Home</a>
-            <a href="">About</a>
-            <a href="">Services</a>
-            <a href="">Contact</a>
-            <a href="..\kwikdelivery\add.html">&#43;</a>
-        </nav>
-      </header>
-    
-    <div class="intro">
-        <h2>Get what you want at your comfort</h2>
-        <p>Fast, reliable and available to sort out your food and drink needs at your comfort.</p>
-    </div>
+        <header>
+            <div class="main-header">
+                <a href="index.html"><h3>KwikDel</h3></a>
 
-    <div class="cta">
-        <a href="..\kwikdelivery\order.html"><button>Make an order</button></a>
-    </div>
+                <div class="header-middle-section">
+                    <input class="search-bar" type="text" placeholder="Search">
 
-    <div class="about">
-        <h3>About Us</h3>
-        <p style="font-size: 13px;">We have restaurants, hotels, liquor stores, groceries, butcheries, etc available here online that you can order a service and riders to deliver to your comfort as soon as you place the order. The services are currently available in and around Kakamega but we will increase our services to cover the whole country and out of the country in the coming days.</p>
-    </div>
+                    <button class="search-button">
+                        <img class="search-icon" src="icons/search-icon.png">
+                    </button>
+                </div>
 
-    <div class="services">
-        <h3>Services</h3>
-        <p style="font-size: 13px;">Foods and soft drinks</p>
-        <p style="font-size: 13px;">Wines and Liquor </p>
-        <p style="font-size: 13px;">Groceries</p>
-        <p style="font-size: 13px;">Kitchen essentials and cooking ingredients</p>
+                <div class="header-right-section">
+                        <a class="cart-link header-link" href="checkout.html">
+                            <div class="cart-quantity">0</div>
+                            <img class="cart-icon" src="icons/cart-icon.png">
 
-    </div>
+                        </a>                        
+                </div> 
+                
+                <div class="menu-container">
+                    <div class="menu-icon" onclick="toggleMenu()">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
 
-    <div class="wcu">
-        <h3>Why Chose Us</h3>
-        <p style="font-size: 13px;">Customers can place food orders from partnered restaurants</p>
-        <p style="font-size: 13px;">Delivery riders are available for deliveries 24/7</p>
-        <p style="font-size: 13px;">You can track your order in real-time here online</p>
-        <p style="font-size: 13px;">Restaurants must comply with health and safety regulations to ensure clean and health meals</p>        
-    </div>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="index.html">Home</a>
+                        <a href="orders.html">Orders</a>
+                        <a href="services.html">Services</a>
+                        <a href="order.html">Order</a>
+                        <a href="add.html">&#43;</a>
+                    </div>
+                </div>
+            </div>
 
-    <div class="contact">
-        <a href="07" style="font-size: 13px;">Contact Us</a>
-        <br><br>
-        <a href="" style="display: block; font-size: 13px;">Chat with us</a>
-    </div>
+            <div class="item-selector">
+                <div class="groceries">Groceries</div>
+                <div class="drinks">Foods & Drinks</div>
+                <div class="kitchen-accessories">Kitchen Accessories</div>
+            </div>
 
-      <footer style="font-size: 13px;">
-        &copy; 2025 KwikDeliveries | All rights reserved
-      </footer>
+        </header>
+
+        <main>
+            <section class="slider-section">
+                
+                <div class="bst-sls-txt">Today's Best Sales!!</div>
+
+                <div class="slider">
+                        
+                    <div class="slider-container">
+
+                        <div class="slider-track" id="sliderTrack">
+
+                            <div class="slide">
+                                <img src="weedie.jpg" alt="Slide 2">
+                                <div class="description-div">
+                                    <div class="item-description">
+                                        <div class="slide-title">Mary Jane $40/g</div>
+                                        <div class="slide-description">The best you will ever puff</div>                                         
+                                    </div>
+                                    <div class="buy-btn">
+                                        <button>Buy</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide">
+                                <div class="image-container">
+                                    <img src="weedie.jpg" alt="Image 1">
+                                    <div class="promo-tag">50% OFF</div>
+                                </div>
+                                <div class="description-div">
+                                    <div class="item-description">
+                                        <div class="slide-title">Mary Jane $40/g</div>
+                                        <div class="slide-description">The best you will ever puff</div>                                         
+                                    </div>
+                                    <div>
+                                        <button>Buy</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="slide">
+                                <img src="weedie.jpg" alt="Slide 3">
+                                <div class="description-div">
+                                    <div class="item-description">
+                                        <div class="slide-title">Mary Jane $40/g</div>
+                                        <div class="slide-description">The best you will ever puff</div>                                         
+                                    </div>
+                                    <div>
+                                        <button>Buy</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                         <div class="nav-buttons">
+                            <button onclick="prevSlide()">❮</button>
+                            <button onclick="nextSlide()">❯</button>
+                        </div> 
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="grid-section">
+
+                <div class="bst-sls-txt">Best Sales This Week!!</div>
+
+                <div class="grid">
+ 
+                </div>
+
+            </section>
+
+
+            <section class="hor-scroll-section">
+
+            <div class="bst-sls-txt">Crazy Offers This Week!!</div>
+
+                <div class="horizontal-scroll">
+
+                    <div class="horizontal-card">
+                        <div class="image-container">
+                            <img src="weed.jpg" alt="Image 1">
+                        </div>
+                        <div class="horizontal-card-content">
+                            <div class="description-div">
+                                <div class="item-description">
+                                    <div class="hori-card-title">Mary Jane $40/g</div>
+                                </div>
+                                <div class="buy-btn">
+                                    <button>Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontal-card">
+                        <div class="image-container">
+                            <img src="weed.jpg" alt="Image 1">
+                            <div class="promo-tag">50% OFF</div>
+                        </div>
+                        <div class="horizontal-card-content">
+                            <div class="description-div">
+                                <div class="item-description">
+                                    <div class="hori-card-title">Mary Jane $40/g</div>
+                                </div>
+                                <div class="buy-btn">
+                                    <button>Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontal-card">
+                        <div class="image-container">
+                            <img src="weed.jpg" alt="Image 1">
+                            <div class="promo-tag">50% OFF</div>
+                        </div>
+                        <div class="horizontal-card-content">
+                            <div class="description-div">
+                                <div class="item-description">
+                                    <div class="hori-card-title">Mary Jane $40/g</div>
+                                </div>
+                                <div class="buy-btn">
+                                    <button>Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontal-card">
+                        <div class="image-container">
+                            <img src="weed.jpg" alt="Image 1">
+                            <div class="promo-tag">50% OFF</div>
+                        </div>
+                        <div class="horizontal-card-content">
+                            <div class="description-div">
+                                <div class="item-description">
+                                    <div class="hori-card-title">Mary Jane $40/g</div>
+                                </div>
+                                <div class="buy-btn">
+                                    <button>Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontal-card">
+                        <div class="image-container">
+                            <img src="weed.jpg" alt="Image 1">
+                            <div class="promo-tag">50% OFF</div>
+                        </div>
+                        <div class="horizontal-card-content">
+                            <div class="description-div">
+                                <div class="item-description">
+                                    <div class="hori-card-title">Mary Jane $40/g</div>
+                                </div>
+                                <div class="buy-btn">
+                                    <button>Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontal-card">
+                        <div class="image-container">
+                            <img src="weed.jpg" alt="Image 1">
+                            <div class="promo-tag">50% OFF</div>
+                        </div>
+                        <div class="horizontal-card-content">
+                            <div class="description-div">
+                                <div class="item-description">
+                                    <div class="hori-card-title">Mary Jane $40/g</div>
+                                </div>
+                                <div class="buy-btn">
+                                    <button>Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="horizontal-card">
+                        <div class="image-container">
+                            <img src="weed.jpg" alt="Image 1">
+                            <div class="promo-tag">50% OFF</div>
+                        </div>
+                        <div class="horizontal-card-content">
+                            <div class="description-div">
+                                <div class="item-description">
+                                    <div class="hori-card-title">Mary Jane $40/g</div>
+                                </div>
+                                <div class="buy-btn">
+                                    <button>Buy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <section class="bottom-grid-section">
+
+                <div class="bst-sls-txt">Offers You Can't Miss!!</div>
+
+                        <div class="products-grid">
+                            
+                        </div>
+
+
+            </section>
+
+
+
+
+
+
+
+
+
+            <footer>
+                <div>Contact Us</div>
+                <div>Support</div>
+                <div>Terms and Conditions</div>
+                <div>License</div>
+                <div>Copyright KwikDeliveries @2025</div>
+            </footer>
+
+        </main>
+
+        <script src="products.js"></script>
+        <script src="script.js"></script>
+       
 </body>
-</html> 
-
+</html>
 

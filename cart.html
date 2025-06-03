@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Service</title>
-    <link rel="stylesheet" href="orders.css">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
         <header>
             <div class="main-header">
                 <a href="index.html"><h3>KwikDel</h3></a>
@@ -36,11 +35,11 @@
                     </div>
 
                     <div class="dropdown-menu" id="dropdownMenu">
-                        <a href="index.html">Home</a>
+                        <a href="..\kwikdelivery\index.html">Home</a>
                         <a href="orders.html">Orders</a>
-                        <a href="services.html">Services</a>
-                        <a href="order.html">Order</a>
-                        <a href="add.html">&#43;</a>
+                        <a href="">Services</a>
+                        <a href="">Contact</a>
+                        <a href="..\kwikdelivery\add.html">&#43;</a>
                     </div>
                 </div>
             </div>
@@ -53,42 +52,21 @@
 
         </header>
 
+    <main>
+        <section class="checkout-section">
 
-      <div>
-        <h4>Register with us</h4>
-      </div>
-        <div class="categories">
-            <select id="contentSelect">
-            <option value="">Select Category</option>
-            <option value="rstnt">Restaurant</option>
-            <option value="htl">Hotel</option>
-            <option value="lqstr">Liquor Store</option>
-            <option value="grstr">Grocery Store</option>
-            <option value="fktch">Foods and Kitchen Essentials</option>
-            <option value="rdrdelv">Rider/Delivery-Guy</option>
-            </select>
-    
-        </div>
-          
-          <div id="contentArea"></div>
-          
-</body>          
+            <div class="item">
+                <div class="item-title">Item Title</div>
+                <div class="item-price">Ksh. 420</div>
+                <div class="item-description">Probably the best item out there walai</div>
+                <div class="quantity">3 pcs
+                    <button>Add more</button>
+                </div>
+                <div class="remove-item">Remove item</div>
+            </div>
+
+        </section>
+    </main>
+
+</body>
 </html>
-
-<script>
-    document.getElementById("contentSelect").addEventListener("change", function() {
-        let timestamp = new Date().getTime();
-        let page = "add/" + this.value + ".html?v=" + timestamp;
-        fetch(page)
-        .then(res => res.text())
-        .then(html => {
-            document.getElementById("contentArea").innerHTML = html;
-        })
-        .catch(err => {
-            document.getElementById("contentArea").innerHTML = "Error loading content.";console.log(err);
-        });
-        
-    });
-</script>
-
-<script src="script.js"></script>
